@@ -12,7 +12,8 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  serverMiddleware: ['~/api/header-cache.js'],
+  // If this is enabled you will experience shared login behaviour -> not recommend!
+  // serverMiddleware: ['~/api/header-cache.js'],
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
