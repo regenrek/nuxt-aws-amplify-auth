@@ -1,1 +1,4 @@
 modules/amplify/aws-amplify-plugin.js
+modules/amplify/sw-templates/*.js
+modules/amplify/plugins/services/*.js
+modules/amplify/plugins/*.js

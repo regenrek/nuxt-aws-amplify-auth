@@ -27,13 +27,11 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
+    ['~/modules/amplify/index.js', awsconfig],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    '~/modules/vh-authhelper/index.js',
-    ['~/modules/amplify/index.js', awsconfig],
-  ],
+  modules: ['~/modules/vh-authhelper/index.js'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
