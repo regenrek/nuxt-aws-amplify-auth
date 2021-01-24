@@ -1,11 +1,11 @@
 <template>
   <div>
     <h2>Login</h2>
-    <form @submit.prevent="signInUser" class="grid gap-y-4">
+    <form class="grid gap-y-4" @submit.prevent="signInUser">
       <div class="form-group">
         <input
-          type="text"
           v-model="email"
+          type="text"
           name="email"
           placeholder="email"
           class="flex-1 appearance-none border border-transparent w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-md rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -17,9 +17,9 @@
       </div>
       <div class="form-group">
         <input
+          v-model="password"
           placeholder="Password"
           type="password"
-          v-model="password"
           name="password"
           class="flex-1 appearance-none border border-transparent w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-md rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
           :class="{ 'is-invalid': submitted && !password }"
@@ -33,8 +33,15 @@
           type="submit"
           class="flex-shrink-0 bg-purple-600 text-white text-base font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
         >
-          Signin
+          Login
         </button>
+      </div>
+
+      <div>
+        <pre>
+          User: hello@regenrek.at
+          Pass: Password#1234
+        </pre>
       </div>
     </form>
   </div>
