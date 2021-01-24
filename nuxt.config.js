@@ -13,7 +13,7 @@ export default {
   },
 
   // If this is enabled you will experience shared login behaviour -> not recommend!
-  // serverMiddleware: ['~/api/header-cache.js'],
+  serverMiddleware: ['~/api/header-cache.js'],
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
