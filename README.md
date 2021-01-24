@@ -3,13 +3,9 @@
 
 ### ✔️ Cache Disabled
 
-[https://nuxt-aws-amplify-auth-bepxlqbvg.vercel.app/](Demo Link)
+[Demo Link](https://nuxt-aws-amplify-auth-bepxlqbvg.vercel.app/)
 
 ### ❌ Cache Enabled
-
-Demo
-
-[https://nuxt-aws-amplify-auth-o76ccy6cd.vercel.app/](Demo Link)
 
 
 With `Cache-Control` enabled it will cache server response to speed the website up but **user sessions will be shared across the application**. This has the effect that you're logged in with someone else user account which of course shouldn't happen.
@@ -24,6 +20,7 @@ Reproduce:
 2. Open a new icognito tab and see that you still loggedin
 
 
+[Demo Link](https://nuxt-aws-amplify-auth-o76ccy6cd.vercel.app/)
 
 
 ## Build Setup
