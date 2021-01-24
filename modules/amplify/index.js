@@ -1,6 +1,6 @@
 const { resolve } = require('path')
 const r = (...path) => resolve(__dirname, ...path)
-const logger = require('./utils/logger')
+// const logger = require('./utils/logger')
 
 module.exports = function (moduleOptions) {
   const defaultOptions = {}
@@ -24,15 +24,14 @@ module.exports = function (moduleOptions) {
     src: r('plugins/services/auth.ssr.js'),
     fileName: 'amplify/service.auth.ssr-server.js',
     mode: 'server',
-    options: {
-      // credential,
-      config: options.Auth,
-    },
+    options,
   })
 }
 
 function addServiceWorker({ config }, templateFile, templateOptions = {}) {
   // Add Service Worker Template
+
+  console.log('add service worker templates')
   this.addTemplate({
     src: r(`sw-templates/${templateFile}`),
     fileName: resolve(
@@ -123,6 +122,6 @@ function loadAuth(options) {
   // }
 }
 
-function isEmpty(val) {
-  return val == null || !(Object.keys(val) || val).length
-}
+// function isEmpty(val) {
+//   return val == null || !(Object.keys(val) || val).length
+// }

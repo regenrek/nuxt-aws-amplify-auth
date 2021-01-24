@@ -1,18 +1,20 @@
-//import admin from 'firebase-admin'
-
 import Auth from '@aws-amplify/auth'
 import Amplify from '@aws-amplify/core'
 
-console.log("WELCOEM TOE AUTH SSR")
-
-const config = <%= serialize(options.config) %>
-Amplify.configure(options)
+const config = <%= JSON.stringify(options) %>
+console.log("WELCOEM TOE AUTH SSR", config)
+Amplify.configure(config)
 
 export default async ({ req, res }) => {
 
 console.log("auth.ssr.js before req.headers.authorization")
 
   if (!req || !req.headers.authorization) {
+    res.locals = {
+      ...res.locals,
+      user: null
+    }
+    console.log("No request - return")
     return
   }
     
